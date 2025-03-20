@@ -1,0 +1,36 @@
+Conexão com o MongoDB
+
+1. Criar o Projeto
+-Abra o Visual Studio e crie um Projeto MVC
+(criar um projeto > Pesquisar Modelos > pesquise: mvc > Aplicativo Web do ASP.NET Core (Model-View-Controller)) 
+-Dê um nome ao projeto
+-Deixe como estrutura 8.0
+-Desative: Configurar para HTTPS
+
+2. Instalando o Driver do MongoDB
+-Vá em Ferramentas > Gerenciador de Pacotes NuGet
+-Busque por MongoDB.Driver e instale a versão 3.2.1(versão recomendada).
+
+3.Criando as Classes
+-Na pasta Models, crie uma classe Pet.cs(Botão direito > Adicionar > Classe) e visualize as mudanças no projeto
+- Crie uma classe para Context.MongoDB.cs para configurar a conexão com o MongoDB (verifique a configuração no projeto)
+
+4. Configutando a Conexão
+-No appsettings.json, adcione a string conexão e o nome do banco(confira as alterações no arquivo)
+-No Program.cs, antes dee var app = builder.Build();, configure a conexão com o serviço (verifique a implementação no projeto).
+
+5. Criando o Controller
+- Na pasta Crontrollers, adicione PetsController (Botão direito > Adicionar > Controlador > Terceira opção de controlador(Controlador MVC com exibições, usando Entity Framework))
+-Escolha a classe de modelo Pet.cs
+- Na Classe DbContext não será possivel escolher um DbContext pronto, por isso será necessário que ele crie um, para isso é necessário: clicar em + > adicionar
+-Ajuste o nome do controlador e clique em adicionar
+
+6. Ajustando PetsController
+-Com o PetsController já criado você deve configurar o contexto de dados, ajustando para o MongoDB(veja as modificações feitas no código)
+
+7. Criando um Link no Layout 
+- No _Layout.cshtml, adicione um link para a página de pets(confira essa atualização na interface do projeto).
+
+Resolvendo Erros
+-Caso ocorra um erro ao inserir dados, ContextMongoDB.cs (verifique as mudanças aplicadas no código)
+-Se necessário crie um metodo sobrepondo o anterior (confira as alterações no projeto)

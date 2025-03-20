@@ -1,2 +1,2 @@
-#ConexãoMongo
-Esta pasta contém o passo a passo e o projeto finalizado para conectar com o banco de dados MongoDB usando a linguagem C#.
+#Desenvolvimento Web III
+Nesta matéria estou aprendendo a desenvolver projetos em C#, fazendo uso também da conexão com o Banco de dados não relacional MongoDB
